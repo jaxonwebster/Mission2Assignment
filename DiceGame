@@ -40,14 +40,14 @@ namespace DiceRollingSimulator
     {
         public int[] SimulateRolls(int rolls)
         {
-            // Array to track results for sums 2 through 12
-            int[] results = new int[13]; // Index 0 and 1 are unused for simplicity
+            // This is the array to track results for sums 2 through 12
+            int[] results = new int[13];
 
             Random random = new Random();
             for (int i = 0; i < rolls; i++)
             {
-                int die1 = random.Next(1, 7); // Random number between 1 and 6
-                int die2 = random.Next(1, 7);
+                int die1 = random.Next(1, 7); // This assigns a random number between 1 and 6
+                int die2 = random.Next(1, 7); // This also assigns a random number between 1 and 6 for the second dice.
                 int sum = die1 + die2;
                 results[sum]++;
             }
@@ -56,3 +56,4 @@ namespace DiceRollingSimulator
         }
     }
 }
+
